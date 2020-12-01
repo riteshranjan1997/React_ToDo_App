@@ -29,10 +29,6 @@ Installation:
 
 To Run Test Suite:
 
-`npm test`
-
-To Start Server:
-
 `npm start`
 Install a live server & run it
 
@@ -41,14 +37,10 @@ To Visit App:
 
 `localhost:3000/`
 
-
-
 ## `Tools Used`
 
 `React`
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-
 
 ### `Deployement` 
 
