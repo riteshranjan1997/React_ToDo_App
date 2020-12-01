@@ -19,7 +19,7 @@ export default class Tasks extends React.Component {
 
     fetchTodo = async () => {
         await axios
-            .get("http://localhost:3000/task")
+            .get("https://todo-app-json-server.herokuapp.com/task")
             .then((res) => {
                 this.setState({
                     data: res.data,
@@ -37,9 +37,14 @@ export default class Tasks extends React.Component {
     render() {
         const { activePage, perPage, data } = this.state
         const totalPages = Math.ceil(this.state.data.length / perPage)
+        const CompletedTask = data.filter(elem => elem.status ).length || 0
+        const notCompletedTask = data.filter(elem => !elem.status ).length || 0
+        const totalTask = data.length || 0
         return (
 
             <div className={Styles.all_task_div}>
+
+        <p className={Styles.status_bar}>Completed Tasks:{CompletedTask} || Not Completed Tasks:{notCompletedTask} || Total Task:{totalTask}</p>
 
                 {data && this.state.data.filter((elem, index) => {
                     const offset = (activePage - 1) * perPage
@@ -47,7 +52,7 @@ export default class Tasks extends React.Component {
                     return pageCondition
                 }).map((item) => (
 
-                    <Link to={`/tasks/${item.id}`}>
+                    <Link style={{textDecoration: "none", color:"black"}} to={`/tasks/${item.id}`}>
                         <div className={Styles.tasks_div} key={item.id}>
                             <p
                                 className={item.status ? `${Styles.done} ${Styles.task}` : Styles.task}

@@ -20,7 +20,7 @@ export default class TaskEdit extends React.Component{
 
     fetchTask = async () => {
         await axios
-            .get(`http://localhost:3000/task?id=${this.props.match.params.id}`)
+            .get(`https://todo-app-json-server.herokuapp.com/task?id=${this.props.match.params.id}`)
             .then((res) => {
                 this.setState({
                     value: res.data[0].title
@@ -31,7 +31,7 @@ export default class TaskEdit extends React.Component{
 
     handleUpdate = async () => {
         console.log(this.props.match)
-       await axios.patch('http://localhost:3000/task/'+this.props.match.params.id, { title:this.state.value })
+       await axios.patch('https://todo-app-json-server.herokuapp.com/task/'+ this.props.match.params.id, { title:this.state.value })
             .then(res =>   this.props.history.goBack() ).catch(err => alert(err))
     }
 

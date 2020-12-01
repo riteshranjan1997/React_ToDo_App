@@ -15,25 +15,31 @@ export default class Home extends React.Component {
 
   handleSubmit = async () => {
 
-    let payload = {
-      id: uuid(),
-      title: this.state.value,
-      status: false,
-    };
-
-    await axios.post("http://localhost:3000/task", {...payload})
-    .then((res)=>  {
-        this.setState({
-          alert:true,
-          value: ""
-        })
-        this.timerId = setTimeout(() => {
+    if(this.state.value !== ""){
+      let payload = {
+        id: uuid(),
+        title: this.state.value,
+        status: false,
+      };
+  
+      await axios.post("https://todo-app-json-server.herokuapp.com/task", {...payload})
+      .then((res)=>  {
           this.setState({
-            alert:false
+            alert:true,
+            value: ""
           })
-        },2500)
-      })
-    .catch((error) => alert(error));
+          this.timerId = setTimeout(() => {
+            this.setState({
+              alert:false
+            })
+          },2500)
+        })
+      .catch((error) => alert(error));
+    }
+    else{
+      alert("Please Enter some value")
+    }
+    
   }
 
 

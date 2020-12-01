@@ -18,7 +18,7 @@ export default class Task extends React.Component {
 
     fetchTask = async () => {
         await axios
-            .get(`http://localhost:3000/task?id=${this.props.match.params.id}`)
+            .get(`https://todo-app-json-server.herokuapp.com/task?id=${this.props.match.params.id}`)
             .then((res) => {
                 this.setState({
                     data: res.data[0]
@@ -29,12 +29,12 @@ export default class Task extends React.Component {
 
 
     handleDelete = () => {
-        axios.delete(`http://localhost:3000/task/${this.props.match.params.id}`).then(res => { this.props.history.goBack() }).catch(err => alert(err))
+        axios.delete(`https://todo-app-json-server.herokuapp.com/task/${this.props.match.params.id}`).then(res => { this.props.history.goBack() }).catch(err => alert(err))
 
     }
 
     handleToggle = async () => {
-        await axios.patch('http://localhost:3000/task/'+this.props.match.params.id, { status: !this.state.data.status })
+        await axios.patch('https://todo-app-json-server.herokuapp.com/task/'+this.props.match.params.id, { status: !this.state.data.status })
              .then(res => { this.fetchTask() }).catch(err => alert(err))
  
      }

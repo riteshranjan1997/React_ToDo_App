@@ -1,5 +1,6 @@
 body{
     font-family: monospace;
+    text-decoration: none !important;
 }
 
 .container{
@@ -15,7 +16,6 @@ body{
 }
 
 #nav {
-    
     font-size: 20px;
     background-color: #282828;
     text-align: center;
@@ -75,10 +75,6 @@ body{
   }
   
 
-
-
-
-
 .todo_input_div{
     position: relative;
     margin: 80px auto;
@@ -126,13 +122,12 @@ input:focus::placeholder {
 
 .all_task_div{
     width: 60%;
-    margin: 30px auto;
+    margin: 15px auto;
     text-align: center;
 }
 
 
 .tasks_div{
-
     margin: 18px 0px;
     background: white;
     border-radius: 5px;
@@ -140,11 +135,25 @@ input:focus::placeholder {
     padding: 10px 0px ;
     box-shadow: 5px 5px 10px  rgb(59, 58, 56);
     position: relative;
+    text-decoration: none !important;
+}
+
+.status_bar{
+    margin-top: 0px;
+    padding: 5px;
+    color: #2684ff;
+    background-color: rgb(218, 255, 51);
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .tasks_div p {
     margin: 0px;
     padding: 0px;
+}
+
+.task{
+    text-decoration: none
 }
 
 .btn{
@@ -160,7 +169,7 @@ input:focus::placeholder {
 .page_btn_div{
     position: absolute;
     left:45%;
-    top: 85%;
+    bottom: 7%;
 }
 
 .page_btn{
@@ -170,7 +179,7 @@ input:focus::placeholder {
     padding: 5px 10px;
     border-radius: 5px;
     outline: none;
-    background-color: rgb(158, 218, 69);
+    background-color: rgb(218, 255, 51);
 }
 
 .back_btn{
