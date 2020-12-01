@@ -1,0 +1,204 @@
+body{
+    font-family: monospace;
+}
+
+.container{
+    width: 800px;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+    padding: 10px;
+    min-height: 200px;
+    border-radius: 15px;
+    background-image: url(https://thumbs.dreamstime.com/b/wood-background-wallpaper-hd-123273980.jpg);
+    box-shadow: 15px 15px 30px 10px rgb(59, 58, 56);
+}
+
+#nav {
+    
+    font-size: 20px;
+    background-color: #282828;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    height: 3em;
+    line-height: 3em;
+    border-radius: 10px;
+  }
+  
+  #nav ul {
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  #nav li {
+    display: inline-block;
+    padding-left: 0;
+  }
+  
+  #nav a {
+    
+    transition: background-color 0.2s ease-in-out;
+    position: relative;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    font-weight: 600;
+    border-radius: 8px;
+    color: #fff;
+    height: 2.5em;
+    line-height: 2.5em;
+    padding: 0 1.25em;
+  }
+  
+  #nav a:hover {
+    color: #fff !important;
+    background: #383838;
+  }
+  
+  #nav a.active {
+    background: #484848;
+  }
+  
+  #nav a.active:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.6em;
+    left: 50%;
+    margin-left: -0.75em;
+    border-left: solid 0.75em transparent;
+    border-right: solid 0.75em transparent;
+    border-top: solid 0.6em #353434;
+  }
+  
+
+
+
+
+
+.todo_input_div{
+    position: relative;
+    margin: 80px auto;
+    width: 60%;
+}
+
+
+.todo_input{
+    position: absolute;
+    z-index: 1;
+    width: 70%;
+    border: none;
+    background: none;
+    outline: black;
+    background-color:#ffffff;
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px  rgb(59, 58, 56)
+}
+
+.todo_add{
+    position: absolute;
+    z-index: 1;
+    left: 82%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 35px;
+    background-color:#ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px  rgb(59, 58, 56)
+
+}
+
+::placeholder { 
+    opacity: 1;
+    font-weight: 600;
+  }
+  
+input:focus::placeholder {
+    color: transparent;
+}
+
+.all_task_div{
+    width: 60%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+
+.tasks_div{
+
+    margin: 18px 0px;
+    background: white;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px 0px ;
+    box-shadow: 5px 5px 10px  rgb(59, 58, 56);
+    position: relative;
+}
+
+.tasks_div p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.btn{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 0px 10px ;
+    box-shadow: 5px 5px 10px  rgb(59, 58, 56);
+}
+
+.page_btn_div{
+    position: absolute;
+    left:45%;
+    top: 85%;
+}
+
+.page_btn{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(158, 218, 69);
+}
+
+.back_btn{
+    position: absolute;
+    top:80%;
+    left:36%;
+}
+
+
+
+.done{
+    text-decoration: line-through;
+    color:green
+}
+
+
+.edit_input{
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px  rgb(59, 58, 56);
+}
+
+.alert{
+    position: absolute;
+    top:50%;
+    left:40%;
+    color:rgb(134, 57, 21);
+  
+}
